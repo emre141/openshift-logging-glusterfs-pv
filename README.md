@@ -36,6 +36,10 @@ openshift_logging_es_ops_nodeselector={"region":"infra"}
 openshift_logging_kibana_ops_nodeselector={"region":"infra"}
 openshift_logging_curator_ops_nodeselector={"region":"infra"}
 `
+- Run only logging playbooks
+
+`ansible-playbook -i /etc/ansible/hosts /usr/share/ansible/openshift-ansible/playbooks/byo/openshift-cluster/openshift-logging.yml -e deployment_type=openshift-enterprise`
+
 
 You can also look at logging aggregating from Openshift Documentation.
 `<link>`: https://docs.openshift.com/container-platform/3.5/install_config/aggregate_logging.html
