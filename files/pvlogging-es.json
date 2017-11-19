@@ -1,0 +1,25 @@
+{
+  "kind": "PersistentVolume",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "logging-es",
+    "creationTimestamp": null,
+    "labels": {
+      "logging": "elastic"
+    }
+  },
+  "spec": {
+    "capacity": {
+      "storage": "10Gi"
+    },
+    "glusterfs": {
+      "endpoints": "logging-es-gluster",
+      "path": "logging-es"
+    },
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "persistentVolumeReclaimPolicy": "Retain"
+  },
+  "status": {}
+}
