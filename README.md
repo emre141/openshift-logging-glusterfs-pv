@@ -12,7 +12,8 @@ If you have not openshift-ansible playbook. you can get it from Github from vers
 `# git clone https://github.com/openshift/openshift-ansible.git`
 
 ##### You can using sample logging parameter in your inventory file as below
-`###########LOGGING DEFINITION###############
+###########LOGGING DEFINITION###############
+
 openshift_logging_install_logging=true
 openshift_logging_use_ops=true
 openshift_logging_namespace=logging
@@ -35,7 +36,7 @@ openshift_logging_es_ops_storage_group=65001
 openshift_logging_es_ops_nodeselector={"region":"infra"}
 openshift_logging_kibana_ops_nodeselector={"region":"infra"}
 openshift_logging_curator_ops_nodeselector={"region":"infra"}
-`
+
 - Run only logging playbooks
 
 `ansible-playbook -i /etc/ansible/hosts /usr/share/ansible/openshift-ansible/playbooks/byo/openshift-cluster/openshift-logging.yml -e deployment_type=openshift-enterprise`
